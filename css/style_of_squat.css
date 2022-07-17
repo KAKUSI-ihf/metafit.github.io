@@ -1,0 +1,29 @@
+html {
+    max-height: 938px;
+}
+
+body {
+    background: url(../images/seiun.png) no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+div.video {
+    position: relative;
+    padding: 0%;
+}
+
+span.video {
+    background-color: black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#video {
+    width: 100%;
+}

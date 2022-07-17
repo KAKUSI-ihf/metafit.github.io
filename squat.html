@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_of_squat.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="squat">
+    <div class="container">
+        <!-- <h1>WEBカメラの映像を表示</h1> -->
+        <div class="row">
+            <div class="col-sm-3 video">
+                <span class="video">Video</span>
+                <video id="video">
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        const video = document.getElementById("video")
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false,
+        }).then(stream => {
+            video.srcObject = stream;
+            video.play()
+        }).catch(e => {
+            console.log(e)
+        })
+    </script>
+</body>
+
+</html>
