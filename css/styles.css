@@ -128,7 +128,7 @@ body {
 
     .container .jumbotron {
         background: url('../images/gym-md.png') no-repeat;
-        height: 558px;
+        height: 588px;
     }
 
 }
@@ -138,15 +138,16 @@ body {
 
     .container .jumbotron {
         background: url('../images/gym-sm.png') no-repeat;
-        /* height: 432px; */
+        height: 456px;
     }
 
 }
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-.container .jumbotron {
-        background-size: cover;
+    .container .jumbotron {
+        background: url('../images/gym-lg.png') no-repeat;
+        height: 770px;
     }
 }
 
