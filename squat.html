@@ -17,6 +17,16 @@
                 <video id="video">
                 </video>
             </div>
+            <div id="clock">
+                <p>
+                    00:00
+                </p>
+            </div>
+        </div>
+        <div>
+            <button onclick="start_exercise()">
+                开始锻炼吧！
+            </button>
         </div>
     </div>
     <script>
@@ -30,6 +40,31 @@
         }).catch(e => {
             console.log(e)
         })
+
+        let minutes,seconds
+        let ele = document.getElementById('clock').firstElementChild
+        function start_exercise(time=10)
+        {
+            minutes = time
+            seconds = 0
+            ele.innerText = `${time}:00`
+            setInterval(time_reduct,1000)
+        }
+        function time_reduct()
+        {
+            if(!minutes && !seconds)
+                clearInterval(time_reduct)
+            if(seconds)
+            {
+                seconds--
+            }
+            else
+            {
+                seconds = 59
+                minutes--
+            }
+            ele.innerText = `${minutes}:${seconds}`
+        }
     </script>
 </body>
 
