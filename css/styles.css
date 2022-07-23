@@ -181,14 +181,36 @@ span.video {
     width: 100%;
 }
 
-#clock p {
+.textbox p {
     font-size: 50px;
     font-weight: bold;
-    color: white;
+    color: black;
     letter-spacing: 2px;
     background-image: linear-gradient(135deg, var(--color2), var(--color4), var(--color6));
     /* text不是通用样式属性值 */
     background-clip: text;
     /* 这个是chrome */
     -webkit-background-clip: text;
+}
+
+.textbox {
+    margin-top: 50px;
+    background-color: white;
+    opacity: .2;
+}
+
+#grade p {
+    font-size: 24px;
+}
+
+button {
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    background-color: #557c3e;
+}
+
+#content {
+    margin-top: 50px;
 }
